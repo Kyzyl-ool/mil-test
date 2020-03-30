@@ -1,6 +1,5 @@
 const webpack = require('webpack');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
@@ -33,13 +32,6 @@ module.exports = {
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
     port: 3000,
-    proxy: {
-      '/api': {
-        target: 'http://tt-ridesharing-backend-staging.herokuapp.com',
-        pathRewrite: { '^/api': '' },
-        changeOrigin: true
-      }
-    }
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.svg', '.ico', '.png', '.scss'],
@@ -85,7 +77,6 @@ module.exports = {
       filename: 'index.html',
       favicon: './public/favicon.ico'
     }),
-    new CopyWebpackPlugin([{ from: './public/icons', to: 'public/icons' }]),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({ filename: 'app.css' }),
     new webpack.DefinePlugin(envKeys),
