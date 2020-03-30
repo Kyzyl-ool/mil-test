@@ -2,6 +2,7 @@
   "name": "mil-test",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://mipt-mil-test.kyzyl-ool.org",
   "dependencies": {
     "@babel/runtime": "^7.7.2",
     "@types/jest": "^24.0.18",
