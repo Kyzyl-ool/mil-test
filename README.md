@@ -36,7 +36,9 @@
 
 Сайт в режиме разработки откроется командой:
 `
-yarn  yarn start
+yarn
+
+yarn start
 `
 
 Production-версия сайта развернута на https://mipt-mil-test.kyzyl-ool.org
