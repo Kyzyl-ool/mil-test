@@ -1,0 +1,21 @@
+.subscriptions {
+  display: flex;
+  padding: 24px 24px 60px 24px;
+  justify-content: space-around;
+
+  &__segment {
+    margin: 0 24px 0 24px;
+    width: 290px;
+  }
+}
+
+.followed {
+  //overflow-y: scroll;
+  margin: 0 24px 0 0;
+  box-sizing: border-box;
+
+  &__item {
+    flex: 1;
+    height: 100px;
+  }
+}
